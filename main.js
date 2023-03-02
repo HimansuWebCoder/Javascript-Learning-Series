@@ -1,201 +1,215 @@
-//* Basic if...else syntax
-// if (condition) {
-/* code to run if condition is true */
-// } else {
-/* run some other code instead */
+//* loops
+
+//* The for...of loop
+// const cats = ["Leopard", "serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+// for (const cat of cats) {
+//   console.log(cat);
 // }
 
-// the following code is also perfectly legal code
-// if (condition) {
-/* code to run if condition is true */
+//* map() and filter()
+// function toUpper(string) {
+// 	return string.toUpperCase();
 // }
-/* run some other code */
-// not recommended
 
-// this syntax is perfectly valid but not recommended
-// if (condition) /* code to run if condition is true */
-// else /* run some other code instead */
+// const cats = ["Leopard", "serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
-//* A real example
-// let shoppingDone = false;
-// let childAllowance;
+// const upperCats = cats.map(toUpper);
 
-// if (shoppingDone === true) {
-//   childAllowance = 10;
-// } else {
-//   childAllowance = 5;
+// console.log(upperCats);
+
+// function lCat(cat) {
+// 	return cat.startsWith('L');
 // }
-// childAllowance
 
-//* Else if
-// const select = document.querySelector("select");
+// const cats = ["Leopard", "serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+// const filtered = cats.filter(lCat);
+// console.log(filtered);
+
+// const cats = ["Leopard", "serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+// const filtered = cats.filter((cat) => cat.startsWith('L'));
+// console.log(filtered);
+
+//* The Standard for loop
+// for (initializer; condition; final-expression) {
+// code to run
+// }
+
+// let str = "";
+// for (let i = 0; i < 9; i++) {
+// str = str + i;
+//   str += i;
+// }
+// console.log(str);
+
+// for (let i = 0; i < 9; i++) {
+// console.log(i);
+// more statements
+// }
+
+//* Looping through collections with a for loop
+// const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+// for (const cat of cats) {
+// 	console.log(cat);
+// }
+//* we could write above code like this:
+// const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+// for ( let i = 0; i < cats.length; i++) {
+// 	console.log(cats[i]);
+// }
+
+// const cats = ['Pete', 'Biggles', 'Jasmine'];
+
+// let myFavoriteCats = 'My cats are called ';
+
+// for (const cat of cats) {
+// 	myFavoriteCats += `${cat},`
+// }
+
+// console.log(myFavoriteCats);
+
+// const cats = ['Pete', 'Biggles', 'Jasmine'];
+
+// let myFavoriteCats = 'My cats are called ';
+
+// for (let i = 0; i < cats.length; i++) {
+// 	if (i === cats.length - 1) {
+// We are at the end of the array
+// 		myFavoriteCats += `and ${cats[i]}.`
+// 	} else {
+// 		myFavoriteCats += `${cats[i]},`
+// 	}
+// }
+
+// console.log(myFavoriteCats);
+
+//* Exiting loops with break
+// const contacts = [
+//   "Himansu:9861194145",
+//   "Rinky:9827852631",
+//   "bou:7894041941",
+//   "bapa:9777273769",
+// ];
 // const para = document.querySelector("p");
+// const input = document.querySelector("input");
+// const btn = document.querySelector("button");
 
-// select.addEventListener("change", setWeather);
+// btn.addEventListener("click", () => {
+//   const searchName = input.value.toLowerCase();
+//   input.value = "";
+//   input.focus();
+//   para.textContet = "";
+//   for (const contact of contacts) {
+//     const splitContact = contact.split(":");
+//     if (splitContact[0].toLowerCase() === searchName) {
+//       para.textContent = `${splitContact[0]}' s number is ${splitContact[1]}.`;
+//       break;
+//     }
+//   }
+//   if (para.textContent === "") {
+//     para.textContent = "Contact not found.";
+//   }
+// });
 
-// function setWeather() {
-//   const choice = select.value;
+//* Skipping iterations with continue
+// const para = document.querySelector("p");
+// const input = document.querySelector("input");
+// const btn = document.querySelector("button");
 
-//   if (choice === "sunny") {
-//     para.textContent = "It is nice and sunny outside today.";
-//   } else if (choice === "rainy") {
-//     para.textContent = "Rain is falling outside;";
-//   } else if (choice === "snowing") {
-//     para.textContent = "The snow is coming down.";
-//   } else if (choice === "overcast") {
-//     para.textContent = "It isn't raining.";
+// btn.addEventListener("click", () => {
+//   para.textContent = "Output: ";
+//   const num = input.value;
+//   input.focus();
+//   for (let i = 1; i <= num; i++) {
+//     let sqRoot = Math.sqrt(i);
+//     if (Math.floor(sqRoot) !== sqRoot) {
+//       continue;
+//     }
+//     para.textContent += `${i} `;
+//   }
+// });
+
+//* while and do... while
+//Syntax
+// initializer
+// while (condition) {
+// code to run
+
+// 	final-expression
+// }
+
+// const cats = ["Pete", "Biggles", "Jasmine"];
+
+// let myFavoriteCats = "My cats are called ";
+
+// let i = 0;
+
+// while (i < cats.length) {
+//   if (i === cats.length - 1) {
+//     myFavoriteCats += `and ${cats[i]}.`;
 //   } else {
-//     para.textContent = "";
+//     myFavoriteCats += `${cats[i]}, `;
 //   }
+
+//   i++;
 // }
 
-//* A note on comparison operators
-// let cheese = "Cheddar";
-// let cheese;
+// console.log(myFavoriteCats);
 
-// if (cheese) {
-//   console.log("Yay! Cheese available for making cheese on toast.");
-// } else {
-//   console.log("No cheese on toast for you today.");
+//* do while
+// initializer;
+// do {
+// code to run
+
+//   final - expression;
+// } while (condition);
+
+// const cats = ['Pete', 'Biggles', 'Jasmine'];
+
+// let myFavoriteCats = 'My cats are called ';
+
+// let i = 0;
+
+// do {
+// 	if (i === cats.length - 1) {
+// 		myFavoriteCats += `and ${cats[i]}.`;
+// 	} else {
+// 		myFavoriteCats += `${cats[i]}, `;
+// 	}
+
+// 	i++;
+// } while (i < cats.length);
+
+// console.log(myFavoriteCats);
+
+//* which loop type should you use?
+//* see in MDN in Details
+
+//* for...of:
+// for (const item of array) {
+// 	code to run
 // }
 
-// let shoppingDone = false;
-// let shoppingDone = true;
-// let childAllowance;
-
-//* we don't need to explicityly specify 'shoppingDone === true'
-// if (shoppingDone) {
-// childAllowance = 10;
-// } else {
-// childAllowance = 5;
-// }
-// childAllowance;
-
-//* Nesting if...else
-// let choice = "sunny";
-// let temperature = 78;
-// let temperature = 89;
-// if (choice === "sunny") {
-//   if (temperature < 86) {
-//     console.log(`it is ${temperature} degrees outside - nice and sunny.`);
-//   } else if (temperature >= 86) {
-//     console.log(`It is ${temperature} degrees outside - REALLY HOT!`);
-//   }
+//* for:
+// for (initializer; CSSConditionRule; final-expression) {
+// 	code to run
 // }
 
-//*Logical operators: AND, OR & NOT
-// test multiple conditions without nested if..else
-// let choice = "sunny";
-// let temperature = 85;
-// let temperature = 95;
+//* while:
+// initializer
+// while (condition) {
+// 	code to run
 
-// if (choice === "sunny" && temperature < 86) {
-//   console.log(`It is ${temperature} degrees outside - nice and sunny.`);
-// } else if (choice === "sunny" && temperature >= 86) {
-//   console.log(`It is ${temperature} degrees outside - REALLY HOT!`);
+// 	final-expression
 // }
 
-//* OR
-// let iceCreamVanOutside = "on fire";
-// let houseStatus = "on fire";
-// let houseStatus;
-// if (iceCreamVanOutside || houseStatus === "on fire") {
-//   console.log("You should leave the house quickly.");
-// } else {
-//   console.log("Probably should just stay in then.");
-// }
-
-//* NOT
-// let iceCreamVanOutside = "on fire";
-// let houseStatus = "on fire";
-// let houseStatus;
-// if (!(iceCreamVanOutside || houseStatus === "on fire")) {
-// 	console.log('Probably should just stay in then.');
-// } else {
-// 	console.log('You should leave the house quickly.');
-// }
-
-//* mix
-// if ((x === 5 || y > 3 || z <= 10) && (loggedIn || userName === 'Steve')) {
-// run the code
-// }
-
-// it is logically not what we want!
-// if (x === 5 || 7 || 10 || 20) {
-// run my code
-// }
-
-// this is a complete test
-// if (x === 5 || x === 7 || x === 10 || x === 20) {
-// run my code
-// }
-
-//* Switch Statements
-// switch (expression) {
-// case choice1:
-// run this code
-// break;
-
-// case choice2:
-// run this code instead
-// break;
-
-// include as many cases as you like
-
-// default:
-// actually, just run this code
-// }
-
-//* A switch Example
-// const select = document.querySelector("select");
-// const para = document.querySelector("p");
-
-// select.addEventListener("change", setWeather);
-
-// function setWeather() {
-//   const choice = select.value;
-
-//   switch (choice) {
-//     case "sunny":
-//       para.textContent = "It is nice and sunny outsie today.";
-//       break;
-//     case "rainy":
-//       para.textContent =
-//         "Rain is falling outside; take a rain coat and an umbrella.";
-//       break;
-//     case "snowing":
-//       para.textContent = "The snow is coimg down!";
-//       break;
-//     case "overcast":
-//       para.textContent = "It isn't raining.";
-//       break;
-//     default:
-//       para.textContent = " ";
-//   }
-// }
-
-//* Ternary Operator
-// condition ? run this code : run this code instead
-
-// const greeting = isBirthday
-//   ? "Happy birthday Mrs. Himansu - we hope you have a great day!"
-//   : "Good morning Mrs. Himansu.";
-
-//* Ternary operator example
-// const select = document.querySelector("select");
-// const html = document.querySelector("html");
-// document.body.style.padding = "10px";
-
-// function update(bgColor, textColor) {
-//   html.style.backgroundColor = bgColor;
-//   html.style.color = textColor;
-// }
-
-// select.addEventListener("change", () =>
-//   select.value === "black" ? update("black", "white") : update("white", "black")
-// );
-
-// const age = 25;
-// const age = 20;
-// const beverage = age >= 21 ? "Beer" : "Juice";
-// console.log(beverage);
+//* and finally do...while
+// initializer
+// do {
+// 	code to run
+// 	final-expression
+// } while (condition)

@@ -1,153 +1,188 @@
-// const buttonA = document.querySelector("#button_A");
-// const headingA = document.querySelector("#heading_A");
+//? Strings the basics
+//* Creating a string
+// const string = "The revolution will not be televised.";
+// string;
 
-// buttonA.onclick = () => {
-//   const name = prompt("what is your name?");
+// const badString1 = This is a test;
+// const badString2 = 'This is a test;
+// const badString3 = This is a test';
+
+//* work if :-
+// const string = "I am a programmer";
+// const badString = string;
+// badString;
+
+//* Single quotes ('') vs. Double quotes ("")
+// const sgl = 'Single quotes.';
+// const dbl = "Double quote";
+// sgl;
+// dbl;
+
+// const badQuotes = 'What on earth?";
+
+// const sglDbl = 'Would you eat a "fish supper"?';
+// const dblSgl = "I'm feeling blue.";
+// sglDbl;
+// dblSgl;
+
+// const bigmouth = 'I've got no right to take my place..'; // wrong
+
+// *Escaping characters in a string
+// const bigmouth = 'I\'ve got no right to take my place..';
+// bigmouth;
+
+// *Concatenating Strings
+// const greeting =`Hello`; // it is a string like normal string Template literal
+
+// const one = "Hello, ";
+// const two = "how are you?";
+// const joined = `${one}${two}`;
+// joined;
+
+//* Concatenation in context
+// const button = document.querySelector("button");
+
+// function greet() {
+//   const name = prompt("What is your name?");
 //   alert(`Hello ${name}, nice to see you!`);
-//   headingA.textContent = `Welcome ${name}`;
-// };
-
-// Without a Variable
-
-// const buttonB = document.querySelector("#button_B");
-// const headingB = document.querySelector("#heading_B");
-
-// buttonB.onclick = () => {
-//   alert(`Hello ${prompt("what is your name?")}, nice to see you!`);
-//   headingB.textContent = `Welcome ${prompt("what is your name?")}`;
-// };
-
-// Declaring a Variable
-// let myName;
-// let myAge;
-// myName;
-// myAge;
-// scoobyDoo;
-
-// Initializing a variable
-// myName = "himansu";
-// myAge = "19";
-// myName;
-// myAge;
-
-// let myDog = "Tommy";
-// myDog;
-
-// A note about var
-// var myName;
-// var myAge;
-
-// var myName = "Himansu";
-
-// function logName() {
-//   console.log(myName);
 // }
-// logName();
+// button.addEventListener("click", greet);
 
-// var myName;
+// *Concatenation using "+"
+// const greeting = "Hello";
+// const name = "Himansu";
+// console.log(greeting + " " + name);
 
-// var myName = 'Himansu';
-// var myName = 'rinky';
-// you can declare many times a variable with var
-// but using let not
-// let myName = 'Himansu';
-// let myName = 'rinky';
+//* Using Template literal
+// const greeting = "Hello";
+// const name = "Himansu";
+// console.log(`${greeting},${name}`);
 
-// you'd have to do this instead
-// let myName = 'Himansu';
-// myName = 'rinky';
-// myName
+//* Numbers vs. Strings
+// const name = "Front ";
+// const number = 232;
+// console.log(`${name}${number}`);
 
-// Updating a variable
-// myName = 'rinky';
-// myAge = 40;
+//*Number().
+// const myString = "123";
+// const myNum = Number(myString);
+// console.log(typeof myNum);
 
-// As aside on variable naming rules
-// discuss details in MDN
-// Good name examples
-// age
-// myAge
-// init
-// initialColor
-// finalOutputValue
-// audio1
-// audio2
+//*toString().
+// const myNum2 = 123;
+// const myString2 = myNum2.toString();
+// console.log(typeof myString2);
 
-// Bad name examples
-// 1
-// a
-// _12
-// myage
-// MYAGE
-// var
-// Document
-// skjfndskjfndbdskjfb
-// thisisareallylongvariablenameman
+//* Including expressions in strings
 
-// Variable types
+// const song = "Fight the Youth";
+// const score = 9;
+// const highestScore = 10;
+// const output = `I like the song ${song}. I gave it a score of ${(score / highestScore)* 100}%.`;
+// output;
 
-// Numbers
-// let myAge = 19;
-// myAge;
+// * Multiline Strings
+// const output = `I like the song. I gave it a score of 90%.`;
+// output;
 
-// Strings ('' or "")
-// let dolphinGoodbye = 'So long and thanks for all the fish';
-// dolphinGoodbye;
+//* using (\n)
+// const output = "I like the song. \nI gave it a score of 90%.";
+// output;
+// console.log(output);
 
-// Booleans
-// let iAmAlive = true;
-// iAmAlive;
+//* Useful String Methods
+//* Strings as Objects
+// const string = 'This is my string';
 
-// let test = 6 > 3;
-// test;
+//* Finding the lenght of a string
+// const browserType = 'mozilla';
+// console.log(browserType.length);
 
-// Arrays
-// let myNameArray =['Himansu', 'Rinky', 'papuni'];
-// let myNumberArray = [10, 15, 50];
-// myNameArray;
-// myNumberArray;
-//* you can access each:
-// console.log(myNameArray[0]);
-// console.log(myNumberArray[0]);
+//* Retrieving a specific string character
+// const browserType = 'mozilla';
+// console.log(browserType[0]);
+// console.log(browserType[browserType.length-1]);
 
-// Objects
-// let dog = {name : 'Tommy', greed : 'Dalmatian'};
-// dog;
-// console.log(dog.name);
-// console.log(dog.greed);
-// console.log(dog);
+//* Testing if a string contains a substring
+//*includes()
+// const browserType = 'mozilla';
+// if (browserType.includes('zilla')) {
+// 	console.log('Found zilla!');
+// } else {
+// 	console.log('No zilla here!');
+// }
 
-// Dynamic Typing
-// let myString = 'Hello';
-// myString;
+// const sentence = 'The quick brown fox jumps over the lazy dog.';
+// const word = 'fox';
+// console.log(`The word "${word}" ${sentence.includes(word) ? 'is' : 'is not'} in the sentence`);
 
-// let myNumber = '509';
-// oops, this is still a string
-// console.log(typeof myNumber);
-// myNumber = 509;
-// much better - now this is a number
-// console.log(typeof myNumber);
+//*startsWith()
+// const browserType = 'mozilla';
 
-// Constants in Javascript
-//* You must initialize them when you declare them
-//* you can't assign them a new value after you've initialized them
-//  let count;
-//  const count; // error
+// if (browserType.startsWith('zilla')) {
+// 	console.log('Found zilla!');
+// } else {
+// 	console.log('No zilla here!');
+// }
 
-// let count = 1;
-// count;
-// count = 2;
-// count;
+// const browserType = 'mozilla';
 
-// const count = 1;
-// count = 2
+// if (browserType.endsWith('zilla')) {
+// 	console.log('Found zilla!');
+// } else {
+// 	console.log('No zilla here!');
+// }
 
-// but
-// const bird = {species : 'Kestrel'};
-// console.log(bird.species);
-// you can add,remove, update like this;
-// bird.species = 'Striated Caracara';
-// console.log(bird.species);
+//* Finding the position of a substring in a string
+//* indexOf()
+// const tagline = 'MDN - Resources for developer, by developers';
+// console.log(tagline.indexOf('developers'))
+// console.log(tagline.indexOf('x'));
+// because x is not present in string
 
-// When to use const and when to use let
-//* details in MDN
+// const tagline = "MDN - Resources for developer, by developers";
+// const firstOccurrence = tagline.indexOf("developers");
+// const secondOccurrence = tagline.indexOf("developers", firstOccurrence + 1);
+
+// console.log(firstOccurrence);
+// console.log(secondOccurrence);
+
+//* Extracting a substring from a string
+//* slice()
+// const browserType = 'mozilla';
+// console.log(browserType.slice(1,4));
+// first include but not last
+// console.log(browserType.slice(2));
+
+//* Changing case
+//* toUpperCase()
+//* toLowerCase()
+// const radData = 'My NaMe Is MuD';
+// console.log(radData.toLowerCase());
+// console.log(radData.toUpperCase());
+
+//* Updating parts of a string
+//* replace()
+// const browserType = 'mozilla';
+// const updated = browserType.replace('moz', 'van');
+
+// console.log(updated);
+// console.log(browserType);
+
+// let browserType = 'mozilla';
+// browserType = browserType.replace('moz', 'van');
+
+// console.log(browserType);
+
+//*replaceAll()
+// let quote = 'To be or not to be';
+// quote = quote.replaceAll('be', 'code');
+
+// console.log(quote);
+
+//* Active Learning Examples
+//* Filtering greeting messages
+//*Fixing capitalization
+//*Making new strings from old parts
+//* All above in MDN DOCS
+//* Read and see those

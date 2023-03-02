@@ -1,39 +1,57 @@
-const para = document.querySelector("p");
+// function checkGuess() {
+//   alert("I am a placeholder");
+// }
+// checkGuess();
 
-para.addEventListener("click", updateName);
+console.log(2 + 2);
+console.log(2 - 2);
+console.log(10 * 10);
+console.log(10 / 2);
 
-function updateName() {
-  const name = prompt("Enter a new name");
-  para.textContent = `Player 1: ${name}`;
-}
+const name = "Bingo";
+name;
+const hello = " says hello!";
+hello;
+const greeting = name + hello;
+greeting;
 
-//* Comment
-//* Single line comment
-// I am a comment
+let name1 = "Bingo";
+name1 += " says hello!";
 
-//* A multi-line comment
-/*
-  I am also
-  a comment
-*/
+//  or
 
-// Function: creates a new paragraph and appends it to the bottom of the HTML body.
+let name2 = "Bingo";
+name2 = name2 + " says hello!";
 
-function createParagraph() {
-  const para = document.createElement("p");
-  para.textContent = "You clicked the button!";
-  document.body.appendChild(para);
-}
+5 === 2 + 4; // false
+"Chris" === "Bob"; // false
+5 === 2 + 3; // true
+2 === "2"; // false; number versus string
+console.log(5 === 2 + 4);
+console.log("Chris" === "Bob");
+console.log(5 === 2 + 3);
+console.log(2 === "2");
 
-/*
-	1. Get references to all the buttons on the page in an array format.
-	2. Loop through all the buttons and add a click event listener to each one.
-  
-	When any button is pressed, the createParagraph() function will be run.
-  */
+5 !== 2 + 4; // true
+"Chris" !== "Bob"; // true
+5 !== 2 + 3; // false
+2 !== "2"; // true; number versus string
+console.log(5 !== 2 + 4);
+console.log("Chris" !== "Bob");
+console.log(5 !== 2 + 3);
+console.log(2 !== "2");
 
-const buttons = document.querySelectorAll("button");
+6 < 10; // true
+20 < 10; // false
+console.log(6 < 10);
+console.log(20 < 10);
 
-for (const button of buttons) {
-  button.addEventListener("click", createParagraph);
+6 > 10; // false
+20 > 10; // true
+console.log(6 > 10);
+console.log(20 > 10);
+
+const fruits = ["apples", "bananas", "cherries"];
+for (const fruit of fruits) {
+  console.log(fruit);
 }

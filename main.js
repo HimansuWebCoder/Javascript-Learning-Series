@@ -1,123 +1,201 @@
-//* Arrays
-//* Creating arrays
-// const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
-// console.log(shopping);
-
-// const sequence = [1, 1, 2, 3, 5, 8, 14];
-// const random = ['tree', 254, [0, 1, 2]];
-// sequence;
-// random;
-
-//* Finding the length of an array
-//* length
-// const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
-// console.log(shopping.length)
-
-//* Accessing and Modifying array items
-// const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
-// console.log(shopping[0]);
-
-// const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
-// shopping[0] = 'tahini';
-// console.log(shopping);
-
-//* Finding the index of items in an array
-// //* indexOf();
-// const birds = ['Parrot', 'Falcon', 'Owl'];
-// console.log(birds.indexOf('Owl'));
-// console.log(birds.indexOf('Rabbit'))
-
-//* Adding items
-//* push()
-// const cities = ["Manchester", "Liverpool"];
-// cities.push("Cardiff");
-// console.log(cities);
-// cities.push('Bradford', 'Brighton');
-// console.log(cities);
-
-// const cities = ['Manchester', 'Liverpool'];
-// const newLength = cities.push('Bristol');
-// console.log(cities);
-// console.log(newLength);
-
-//* unshift()
-// const cities = ['Manchester', 'Liverpool'];
-// cities.unshift('Edinburgh');
-// console.log(cities);
-
-// * Removing items
-//* pop() remove last item
-// const cities = ['delhi', 'bhubaneswar'];
-// cities.pop();
-// console.log(cities);
-
-// const cities = ['delhi', 'pune'];
-// const removedCity = cities.pop();
-// console.log(removedCity);
-
-//* shift() remove 1st item
-// const cities = ['delhi', 'pune'];
-// cities.shift();
-// console.log(cities);
-
-//* splice() remove item using indexOf
-// const cities = ['pune', 'delhi', 'mumbai', 'bihar'];
-// const index = cities.indexOf('delhi');
-// if (index !== -1) {
-// 	cities.splice(index, 1);
-// }
-// console.log(cities);
-
-// const cities = ['pune', 'delhi', 'mumbai', 'bihar'];
-// const index = cities.indexOf('delhi');
-// if (index !== -1) {
-// 	cities.splice(index, 2);
-// }
-// console.log(cities);
-
-//* Accessing every item
-//* for...of
-// const birds = ['Parrot', 'crow', 'Owl'];
-
-// for (const bird of birds) {
-// 	console.log(bird);
+//* Basic if...else syntax
+// if (condition) {
+/* code to run if condition is true */
+// } else {
+/* run some other code instead */
 // }
 
-//*map()
-// function double(number) {
-// 	return number * 2;
+// the following code is also perfectly legal code
+// if (condition) {
+/* code to run if condition is true */
 // }
-// const numbers = [5, 2, 7, 6];
-// const doubled = numbers.map(double);
-// console.log(doubled);
+/* run some other code */
+// not recommended
 
-//*filter()
-// function isLong(city) {
-// 	return city.length > 5;
+// this syntax is perfectly valid but not recommended
+// if (condition) /* code to run if condition is true */
+// else /* run some other code instead */
+
+//* A real example
+// let shoppingDone = false;
+// let childAllowance;
+
+// if (shoppingDone === true) {
+//   childAllowance = 10;
+// } else {
+//   childAllowance = 5;
 // }
-// const cities = ['London', 'India', 'Pune', 'Mumbai'];
-// const longer = cities.filter(isLong);
-// console.log(longer);
+// childAllowance
 
-//* Converting between strings & arrays
-//* split()
-// const data = 'pune, mumbai, bihar, delhi, punjab, odisha';
-// split it at each comma:
-// const cities = data.split(',');
-// cities;
-// console.log(cities.length);
-// console.log(cities[0]);
-// console.log(cities[1]);
-// console.log(cities[cities.length - 1]);
+//* Else if
+// const select = document.querySelector("select");
+// const para = document.querySelector("p");
 
-//* join()
-// const commaSeparated = cities.join(',');
-// commaSeparated;
+// select.addEventListener("change", setWeather);
 
-//* toString()
-// const dogNames = ['Rocket', 'Flash', 'Bella', 'Slugger'];
-// console.log(dogNames.toString());
+// function setWeather() {
+//   const choice = select.value;
 
-//? Active Learning: Printing those products#
-//? Active Learning: Top 5 searches#
-//? These are in MDN read and understand
+//   if (choice === "sunny") {
+//     para.textContent = "It is nice and sunny outside today.";
+//   } else if (choice === "rainy") {
+//     para.textContent = "Rain is falling outside;";
+//   } else if (choice === "snowing") {
+//     para.textContent = "The snow is coming down.";
+//   } else if (choice === "overcast") {
+//     para.textContent = "It isn't raining.";
+//   } else {
+//     para.textContent = "";
+//   }
+// }
+
+//* A note on comparison operators
+// let cheese = "Cheddar";
+// let cheese;
+
+// if (cheese) {
+//   console.log("Yay! Cheese available for making cheese on toast.");
+// } else {
+//   console.log("No cheese on toast for you today.");
+// }
+
+// let shoppingDone = false;
+// let shoppingDone = true;
+// let childAllowance;
+
+//* we don't need to explicityly specify 'shoppingDone === true'
+// if (shoppingDone) {
+// childAllowance = 10;
+// } else {
+// childAllowance = 5;
+// }
+// childAllowance;
+
+//* Nesting if...else
+// let choice = "sunny";
+// let temperature = 78;
+// let temperature = 89;
+// if (choice === "sunny") {
+//   if (temperature < 86) {
+//     console.log(`it is ${temperature} degrees outside - nice and sunny.`);
+//   } else if (temperature >= 86) {
+//     console.log(`It is ${temperature} degrees outside - REALLY HOT!`);
+//   }
+// }
+
+//*Logical operators: AND, OR & NOT
+// test multiple conditions without nested if..else
+// let choice = "sunny";
+// let temperature = 85;
+// let temperature = 95;
+
+// if (choice === "sunny" && temperature < 86) {
+//   console.log(`It is ${temperature} degrees outside - nice and sunny.`);
+// } else if (choice === "sunny" && temperature >= 86) {
+//   console.log(`It is ${temperature} degrees outside - REALLY HOT!`);
+// }
+
+//* OR
+// let iceCreamVanOutside = "on fire";
+// let houseStatus = "on fire";
+// let houseStatus;
+// if (iceCreamVanOutside || houseStatus === "on fire") {
+//   console.log("You should leave the house quickly.");
+// } else {
+//   console.log("Probably should just stay in then.");
+// }
+
+//* NOT
+// let iceCreamVanOutside = "on fire";
+// let houseStatus = "on fire";
+// let houseStatus;
+// if (!(iceCreamVanOutside || houseStatus === "on fire")) {
+// 	console.log('Probably should just stay in then.');
+// } else {
+// 	console.log('You should leave the house quickly.');
+// }
+
+//* mix
+// if ((x === 5 || y > 3 || z <= 10) && (loggedIn || userName === 'Steve')) {
+// run the code
+// }
+
+// it is logically not what we want!
+// if (x === 5 || 7 || 10 || 20) {
+// run my code
+// }
+
+// this is a complete test
+// if (x === 5 || x === 7 || x === 10 || x === 20) {
+// run my code
+// }
+
+//* Switch Statements
+// switch (expression) {
+// case choice1:
+// run this code
+// break;
+
+// case choice2:
+// run this code instead
+// break;
+
+// include as many cases as you like
+
+// default:
+// actually, just run this code
+// }
+
+//* A switch Example
+// const select = document.querySelector("select");
+// const para = document.querySelector("p");
+
+// select.addEventListener("change", setWeather);
+
+// function setWeather() {
+//   const choice = select.value;
+
+//   switch (choice) {
+//     case "sunny":
+//       para.textContent = "It is nice and sunny outsie today.";
+//       break;
+//     case "rainy":
+//       para.textContent =
+//         "Rain is falling outside; take a rain coat and an umbrella.";
+//       break;
+//     case "snowing":
+//       para.textContent = "The snow is coimg down!";
+//       break;
+//     case "overcast":
+//       para.textContent = "It isn't raining.";
+//       break;
+//     default:
+//       para.textContent = " ";
+//   }
+// }
+
+//* Ternary Operator
+// condition ? run this code : run this code instead
+
+// const greeting = isBirthday
+//   ? "Happy birthday Mrs. Himansu - we hope you have a great day!"
+//   : "Good morning Mrs. Himansu.";
+
+//* Ternary operator example
+// const select = document.querySelector("select");
+// const html = document.querySelector("html");
+// document.body.style.padding = "10px";
+
+// function update(bgColor, textColor) {
+//   html.style.backgroundColor = bgColor;
+//   html.style.color = textColor;
+// }
+
+// select.addEventListener("change", () =>
+//   select.value === "black" ? update("black", "white") : update("white", "black")
+// );
+
+// const age = 25;
+// const age = 20;
+// const beverage = age >= 21 ? "Beer" : "Juice";
+// console.log(beverage);

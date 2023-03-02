@@ -1,188 +1,123 @@
-//? Strings the basics
-//* Creating a string
-// const string = "The revolution will not be televised.";
-// string;
+//* Arrays
+//* Creating arrays
+// const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+// console.log(shopping);
 
-// const badString1 = This is a test;
-// const badString2 = 'This is a test;
-// const badString3 = This is a test';
+// const sequence = [1, 1, 2, 3, 5, 8, 14];
+// const random = ['tree', 254, [0, 1, 2]];
+// sequence;
+// random;
 
-//* work if :-
-// const string = "I am a programmer";
-// const badString = string;
-// badString;
+//* Finding the length of an array
+//* length
+// const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+// console.log(shopping.length)
 
-//* Single quotes ('') vs. Double quotes ("")
-// const sgl = 'Single quotes.';
-// const dbl = "Double quote";
-// sgl;
-// dbl;
+//* Accessing and Modifying array items
+// const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+// console.log(shopping[0]);
 
-// const badQuotes = 'What on earth?";
+// const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+// shopping[0] = 'tahini';
+// console.log(shopping);
 
-// const sglDbl = 'Would you eat a "fish supper"?';
-// const dblSgl = "I'm feeling blue.";
-// sglDbl;
-// dblSgl;
+//* Finding the index of items in an array
+// //* indexOf();
+// const birds = ['Parrot', 'Falcon', 'Owl'];
+// console.log(birds.indexOf('Owl'));
+// console.log(birds.indexOf('Rabbit'))
 
-// const bigmouth = 'I've got no right to take my place..'; // wrong
+//* Adding items
+//* push()
+// const cities = ["Manchester", "Liverpool"];
+// cities.push("Cardiff");
+// console.log(cities);
+// cities.push('Bradford', 'Brighton');
+// console.log(cities);
 
-// *Escaping characters in a string
-// const bigmouth = 'I\'ve got no right to take my place..';
-// bigmouth;
+// const cities = ['Manchester', 'Liverpool'];
+// const newLength = cities.push('Bristol');
+// console.log(cities);
+// console.log(newLength);
 
-// *Concatenating Strings
-// const greeting =`Hello`; // it is a string like normal string Template literal
+//* unshift()
+// const cities = ['Manchester', 'Liverpool'];
+// cities.unshift('Edinburgh');
+// console.log(cities);
 
-// const one = "Hello, ";
-// const two = "how are you?";
-// const joined = `${one}${two}`;
-// joined;
+// * Removing items
+//* pop() remove last item
+// const cities = ['delhi', 'bhubaneswar'];
+// cities.pop();
+// console.log(cities);
 
-//* Concatenation in context
-// const button = document.querySelector("button");
+// const cities = ['delhi', 'pune'];
+// const removedCity = cities.pop();
+// console.log(removedCity);
 
-// function greet() {
-//   const name = prompt("What is your name?");
-//   alert(`Hello ${name}, nice to see you!`);
+//* shift() remove 1st item
+// const cities = ['delhi', 'pune'];
+// cities.shift();
+// console.log(cities);
+
+//* splice() remove item using indexOf
+// const cities = ['pune', 'delhi', 'mumbai', 'bihar'];
+// const index = cities.indexOf('delhi');
+// if (index !== -1) {
+// 	cities.splice(index, 1);
 // }
-// button.addEventListener("click", greet);
+// console.log(cities);
 
-// *Concatenation using "+"
-// const greeting = "Hello";
-// const name = "Himansu";
-// console.log(greeting + " " + name);
+// const cities = ['pune', 'delhi', 'mumbai', 'bihar'];
+// const index = cities.indexOf('delhi');
+// if (index !== -1) {
+// 	cities.splice(index, 2);
+// }
+// console.log(cities);
 
-//* Using Template literal
-// const greeting = "Hello";
-// const name = "Himansu";
-// console.log(`${greeting},${name}`);
+//* Accessing every item
+//* for...of
+// const birds = ['Parrot', 'crow', 'Owl'];
 
-//* Numbers vs. Strings
-// const name = "Front ";
-// const number = 232;
-// console.log(`${name}${number}`);
-
-//*Number().
-// const myString = "123";
-// const myNum = Number(myString);
-// console.log(typeof myNum);
-
-//*toString().
-// const myNum2 = 123;
-// const myString2 = myNum2.toString();
-// console.log(typeof myString2);
-
-//* Including expressions in strings
-
-// const song = "Fight the Youth";
-// const score = 9;
-// const highestScore = 10;
-// const output = `I like the song ${song}. I gave it a score of ${(score / highestScore)* 100}%.`;
-// output;
-
-// * Multiline Strings
-// const output = `I like the song. I gave it a score of 90%.`;
-// output;
-
-//* using (\n)
-// const output = "I like the song. \nI gave it a score of 90%.";
-// output;
-// console.log(output);
-
-//* Useful String Methods
-//* Strings as Objects
-// const string = 'This is my string';
-
-//* Finding the lenght of a string
-// const browserType = 'mozilla';
-// console.log(browserType.length);
-
-//* Retrieving a specific string character
-// const browserType = 'mozilla';
-// console.log(browserType[0]);
-// console.log(browserType[browserType.length-1]);
-
-//* Testing if a string contains a substring
-//*includes()
-// const browserType = 'mozilla';
-// if (browserType.includes('zilla')) {
-// 	console.log('Found zilla!');
-// } else {
-// 	console.log('No zilla here!');
+// for (const bird of birds) {
+// 	console.log(bird);
 // }
 
-// const sentence = 'The quick brown fox jumps over the lazy dog.';
-// const word = 'fox';
-// console.log(`The word "${word}" ${sentence.includes(word) ? 'is' : 'is not'} in the sentence`);
-
-//*startsWith()
-// const browserType = 'mozilla';
-
-// if (browserType.startsWith('zilla')) {
-// 	console.log('Found zilla!');
-// } else {
-// 	console.log('No zilla here!');
+//*map()
+// function double(number) {
+// 	return number * 2;
 // }
+// const numbers = [5, 2, 7, 6];
+// const doubled = numbers.map(double);
+// console.log(doubled);
 
-// const browserType = 'mozilla';
-
-// if (browserType.endsWith('zilla')) {
-// 	console.log('Found zilla!');
-// } else {
-// 	console.log('No zilla here!');
+//*filter()
+// function isLong(city) {
+// 	return city.length > 5;
 // }
+// const cities = ['London', 'India', 'Pune', 'Mumbai'];
+// const longer = cities.filter(isLong);
+// console.log(longer);
 
-//* Finding the position of a substring in a string
-//* indexOf()
-// const tagline = 'MDN - Resources for developer, by developers';
-// console.log(tagline.indexOf('developers'))
-// console.log(tagline.indexOf('x'));
-// because x is not present in string
+//* Converting between strings & arrays
+//* split()
+// const data = 'pune, mumbai, bihar, delhi, punjab, odisha';
+// split it at each comma:
+// const cities = data.split(',');
+// cities;
+// console.log(cities.length);
+// console.log(cities[0]);
+// console.log(cities[1]);
+// console.log(cities[cities.length - 1]);
 
-// const tagline = "MDN - Resources for developer, by developers";
-// const firstOccurrence = tagline.indexOf("developers");
-// const secondOccurrence = tagline.indexOf("developers", firstOccurrence + 1);
+//* join()
+// const commaSeparated = cities.join(',');
+// commaSeparated;
 
-// console.log(firstOccurrence);
-// console.log(secondOccurrence);
+//* toString()
+// const dogNames = ['Rocket', 'Flash', 'Bella', 'Slugger'];
+// console.log(dogNames.toString());
 
-//* Extracting a substring from a string
-//* slice()
-// const browserType = 'mozilla';
-// console.log(browserType.slice(1,4));
-// first include but not last
-// console.log(browserType.slice(2));
-
-//* Changing case
-//* toUpperCase()
-//* toLowerCase()
-// const radData = 'My NaMe Is MuD';
-// console.log(radData.toLowerCase());
-// console.log(radData.toUpperCase());
-
-//* Updating parts of a string
-//* replace()
-// const browserType = 'mozilla';
-// const updated = browserType.replace('moz', 'van');
-
-// console.log(updated);
-// console.log(browserType);
-
-// let browserType = 'mozilla';
-// browserType = browserType.replace('moz', 'van');
-
-// console.log(browserType);
-
-//*replaceAll()
-// let quote = 'To be or not to be';
-// quote = quote.replaceAll('be', 'code');
-
-// console.log(quote);
-
-//* Active Learning Examples
-//* Filtering greeting messages
-//*Fixing capitalization
-//*Making new strings from old parts
-//* All above in MDN DOCS
-//* Read and see those
+//? Active Learning: Printing those products#
+//? Active Learning: Top 5 searches#
+//? These are in MDN read and understand

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test1</title>
+  </head>
+  <body>
+    <button>press me</button>
+    <script>
+      const mybutton = document.querySelector("button");
+      mybutton.addEventListener("click", press);
+      // mypara.addEventListener("click", myStyle);
+
+      function press() {
+        const myBody = document.body;
+        const mypara = document.createElement("p");
+        myBody.appendChild(mypara);
+        mypara.style.color = "red";
+        mypara.style.border = "2px dotted blue";
+        mypara.style.backgroundColor = "yellow";
+        mypara.style.width = "200px";
+        mypara.style.margin = "20px";
+        mypara.style.padding = "20px";
+        mypara.style.boxShadow = "3px 10px 6px";
+
+        const myops = document.createElement("h1");
+        myops.textContent = "How is the day of a new learning of programming";
+        mypara.appendChild(myops);
+      }
+
+      // function myStyle() {
+      // const myBody = document.body;
+      // const mypara = document.createElement("p");
+      // myBody.appendChild(mypara);
+      // mypara.style.color = "red";
+      // mypara.style.border = "2px dotted blue";
+      // mypara.style.backgroundColor = "yellow";
+      // mypara.style.width = "200px";
+      // mypara.style.margin = "20px";
+      // mypara.style.padding = "20px";
+      // mypara.style.boxShadow = "3px 10px 6px";
+      //   }
+    </script>
+  </body>
+</html>

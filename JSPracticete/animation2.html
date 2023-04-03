@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript animation learning</title>
+    <style>
+      #myDIV {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: relative;
+        /* animation: mymove 1s infinite; */
+        /* animation: mynewmove 1s infinite; */
+      }
+
+      /* @keyframes mymove {
+        from {
+          left: 0px;
+        }
+        to {
+          left: 200px;
+        }
+      } */
+
+      @keyframes mynewmove {
+        from {
+          top: 0px;
+          /* left: 0px; */
+        }
+        to {
+          top: 200px;
+          /* right: 500px; */
+        }
+      }
+      .btn {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <button onclick="myFunction()">Try it</button> -->
+    <button class="btn">Animate</button>
+    <button class="closeBtn">Stop</button>
+    <div id="myDIV"></div>
+    <script>
+      //   function myFunction() {
+      //     document.getElementById("myDIV").style.animation = "mynewmove 4s 2";
+      //   }
+
+      const btn = document.querySelector(".btn");
+
+      btn.addEventListener("click", animateit);
+
+      const closeBtn = document.querySelector(".closeBtn");
+
+      btn.addEventListener("click", close);
+
+      function close() {
+        // const list = document.querySelector("#myDIV");
+        // list.classList.remove("#myDIV");
+        // const list = element.classList;
+        // list.remove("myStyle");
+        // 		function myFunction() {
+        //   document.getElementById("myDIV").classList.remove("myStyle");
+      }
+
+      function animateit() {
+        const div = document.querySelector("#myDIV");
+        div.style.animation = "mynewmove 1s infinite";
+        div.style.animationDirection = "alternate";
+        
+      }
+    </script>
+  </body>
+</html>

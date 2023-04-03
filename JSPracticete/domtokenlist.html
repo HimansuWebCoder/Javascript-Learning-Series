@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+          .hima {
+            color: blue;
+            border: 10px solid black;
+            background-color: yellow;
+            color: red;
+      animation-name: himansu;
+          }
+       @keyframe himansu {
+      from {
+      	top 100%;
+      }
+      to {
+      	bottom: 100%;
+      }
+       }
+    </style>
+  </head>
+  <body>
+    <!-- <span class="a b">classList is 'a b'</span> -->
+    <button>press</button>
+    <div class="himansu">hello himansu</div>
+    <script>
+      //   const span = document.querySelector("span");
+
+      //   const classes = span.classList;
+      //   div.addEventListener("click", () => {});
+      const btn = document.querySelector("button");
+      btn.addEventListener("click", color);
+
+      function color() {
+        const div = document.querySelector("div");
+        const rinky = div.classList;
+        const result = rinky.toggle("hima");
+      }
+      //   span.addEventListener("click", () => {
+      //     const result = classes.toggle("hima");
+      //     span.textContent = ` ${
+      //       result ? "added" : "removed"
+      //     }; classList is now "${classes}".`;
+      //   });
+    </script>
+    <!-- const btn = document.querySelector(".btn");
+
+	 btn.addEventListener("click", change);
+
+	 function change() {
+	   const togglediv = document.querySelector(".design");
+	   togglediv.classList.toggle("mydesign");
+	 } -->
+  </body>
+</html>

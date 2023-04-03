@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .myStyle {
+      background-color: coral;
+      padding: 16px;
+    }
+  </style>
+
+  <body>
+    <!-- <h1>The DOMToken Object</h1>
+    <h2>The add() Method</h2> -->
+
+    <!-- <button onclick="myFunction()">Add</button>
+    <p>Click "Add" to add the "myStyle" class to myDIV.</p> -->
+    <button>Add</button>
+
+    <!-- <div id="myDIV">
+      <p>I am a myDIV.</p>
+    </div>
+     -->
+    <div>
+      <p>Hello absolute programmers</p>
+    </div>
+
+    <script>
+      //   function myFunction() {
+      //     const list = document.getElementById("myDIV").classList;
+      //     list.add("myStyle");
+      //   }
+
+      const btn = document.querySelector("button");
+
+      btn.addEventListener("click", hello);
+
+      function hello() {
+        const list = document.querySelector("div").classList;
+        list.add("myStyle");
+      }
+    </script>
+  </body>
+</html>

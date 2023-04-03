@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .button {
+        border: 1px solid blue;
+        border-radius: 10px;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="a b c"></span>
+
+    <!-- <button class="button">Button</button> -->
+
+    <button class="box">create</button>
+
+    <script>
+      function wow() {
+        const span = document.querySelector("span");
+        const mybtn = document
+          .createElement("button")
+          .setAttribute("mybtn", "my2btn");
+        mybtn.textContent = "button";
+        document.body.appendChild(mybtn);
+
+        const classes = span.classList;
+        classes.add("mybtn");
+        span.textContent = classes;
+      }
+      const btn = document.querySelector(".box");
+
+      btn.addEventListener("click", wow);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>create</button>
+    <script>
+      const button = document.querySelector("button");
+
+      button.addEventListener("click", himansu);
+
+      function himansu() {
+        const body = document.body;
+        const myPara = document.createElement("p");
+        myPara.textContent =
+          "I feel energetic sincd I started Exercise Regularly.";
+        body.appendChild(myPara);
+        myPara.style.border = "2px solid blue";
+        myPara.style.boxShadow = "2px 4px 6px";
+        myPara.style.color = "white";
+        myPara.style.backgroundColor = "black";
+        myPara.style.fontFamily = "Times new roman";
+        myPara.style.borderRadius = "10px";
+      }
+    </script>
+  </body>
+</html>

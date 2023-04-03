@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      textarea {
+        resize: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <input id="input" type="text" value="programming job is now " readonly /> -->
+    <textarea name="text" id="input" cols="30" rows="10" readonly>
+		<script>
+			function copy() {
+			  let copyText = document.querySelector("#input");
+			  copyText.select();
+			  document.execCommand("copy");
+			}
+			//   Himansu Naik is fraud programmer
+			document.querySelector("#copy").addEventListener("click", copy);
+		  </script>
+   </textarea
+    >
+    <button id="copy">Copy</button>
+    <!-- <input type="text" /> -->
+    <textarea name="text" id="" cols="30" rows="10"></textarea>
+    <script>
+      function copy() {
+        let copyText = document.querySelector("#input");
+        copyText.select();
+        document.execCommand("copy");
+      }
+      //   Himansu Naik is fraud programmer
+      document.querySelector("#copy").addEventListener("click", copy);
+    </script>
+  </body>
+</html>

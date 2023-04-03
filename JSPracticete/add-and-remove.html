@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADD & REMOVE</title>
+    <style>
+      .color {
+        /* border: 3px solid blue; */
+        background-color: black;
+        /* width: 100px; */
+        /* height: 100px; */
+      }
+      button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="add">Add</button>
+    <button class="remove">Remove</button>
+    <div></div>
+    <script>
+      const add = document.querySelector(".add");
+      const remove = document.querySelector(".remove");
+
+      //   add.addEventListener("click", () => {
+      //     // const div = document.querySelector("div");
+      //     const body = document.body;
+      //     body.classList.add("color");
+      //   });
+
+      add.addEventListener("click", change);
+
+      function change() {
+        const body = document.body;
+        body.classList.add("color");
+      }
+
+      //   remove.addEventListener("click", () => {
+      //     // const div = document.querySelector("div");
+      //     const body = document.body;
+      //     body.classList.remov`	("color");
+      //   });
+
+      remove.addEventListener("click", notChange);
+
+      function notChange() {
+        const body = document.body;
+        body.classList.remove("color");
+      }
+    </script>
+  </body>
+</html>

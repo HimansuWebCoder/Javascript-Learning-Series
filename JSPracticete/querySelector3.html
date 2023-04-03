@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>querySelectorAll</title>
+</head>
+<body>
+	<p class="select">Himansu</p>
+	<h class="select">Rinky</h>
+	<div class="select">sipu</div>
+	<script>
+		const select = document.querySelectorAll(".select");
+		select[0].style.color = "red";
+		select[0].style.fontSize = "30px";
+		for (let i = 0; i < select.length; i++) {
+			select[i].style.border = "10px solid black";
+		}
+	</script>
+</body>
+</html>

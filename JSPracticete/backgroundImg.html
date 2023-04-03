@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>HTML Style Object</h1>
+    <h2>The backgroundColor Property</h2>
+
+    <!-- <button type="button" onclick="myFunction()">Set background color</button> -->
+    <button>change bg color</button>
+
+    <script>
+      //   function myFunction() {
+      //     document.body.style.backgroundColor = "red";
+      //   }
+      const btn = document.querySelector("button");
+      btn.addEventListener("click", change);
+
+      function change() {
+        document.body.style.backgroundColor = "yellow";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <button>click</button>
+    </div>
+
+    <ul></ul>
+
+    <script>
+      const paragraph = document.querySelector("ul");
+      //   const div = document.querySelector("div");
+      const button = document.querySelector("button");
+
+      button.addEventListener("click", () => {
+        const myItem = document.createElement("li");
+        // const listText = document.createElement("span");
+        const myButton = document.createElement("button");
+
+        // myItem.appendChild(listText);
+        // listText.textContent = "Hello how are you?";
+        myItem.textContent = "hello";
+        myItem.appendChild(myButton);
+        myButton.textContent = "delete";
+        paragraph.appendChild(myItem);
+
+        myButton.addEventListener("click", () => {
+          paragraph.removeChild(myItem);
+        });
+      });
+    </script>
+  </body>
+</html>

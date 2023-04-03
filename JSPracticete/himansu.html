@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* div {
+        border: 2px solid blue;
+        background-color: yellow;
+        width: 200px;
+      } */
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>
+        <button>mybutton</button>
+      </span>
+    </div>
+    <script>
+      const myButton = document.querySelector("button");
+
+      myButton.addEventListener("click", hello);
+
+      function hello() {
+        // const body = document.body;
+        // const myBox = document.createElement("div");
+        // body.appendChild(myBox);
+
+        // const myText = document.createElement("p");
+        // myText.textContent = "Grow your Skill everyDay although little.";
+        // myBox.appendChild(myText);
+
+        const body = document.body;
+        const mybox = document.createElement("span");
+        body.appendChild(mybox);
+
+        const myText = document.createElement("p");
+        myText.textContent = "My Chair finally arrive our house";
+        mybox.appendChild(myText);
+      }
+    </script>
+  </body>
+</html>

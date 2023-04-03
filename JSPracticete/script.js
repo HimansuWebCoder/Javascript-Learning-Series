@@ -1,42 +1,37 @@
-// const btn = document.querySelector("button");
-// const buttonn = document.querySelector("button");
-
-// function myFunction() {
-//   document.body.style.backgroundColor = "red";
+// for (let i = 0; i < rows * 3; i++) {
+//   const img = document.createElement("img");
+//   img.src = `${unsplashURL}${getRandomSize()}`;
+//   container.appendChild(img);
 // }
 
-// btn.addEventListener("click", () => {
-//   myFunction();
-//   buttonn.toggleAttribute("disabled");
-// });
+const btn = document.querySelector("button");
 
-// const btn = document.querySelector("button");
+btn.addEventListener("click", change);
 
-// function myHimansu() {
-//   document.style.Color = "red";
-// }
+function change() {
+  const container = document.querySelector(".container");
+  const unsplashURL = "https://source.unsplash.com/random/";
+  const rows = 10;
 
-// btn.addEventListener("click", () => {
-//   myHimansu();
-// });
+  for (let i = 0; i < rows * 3; i++) {
+    const img = document.createElement("img");
+    img.src = `${unsplashURL}${getRandomSize()}`;
+    container.appendChild(img);
+  }
 
-// const change = document.querySelector(".change");
+  function getRandomSize() {
+    return `${getRandomNr()}x${getRandomNr()}}`;
+  }
 
-// change.style.backgroundColor = "black";
-// change.style.color = "white";
-// change.style.border = "10px solid red";
-
-// change.addEventListener("click", myChange);
-
-const myButton = document.querySelector("button");
-myButton.addEventListener("click", myFunction);
-
-function myFunction() {
-  const body = document.body;
-  const himansu = document.createElement("div");
-  body.appendChild(himansu);
-
-  const msgBox = document.createElement("p");
-  msgBox.textContent = "Hello Programmers can you helop me?";
-  himansu.appendChild(msgBox);
+  function getRandomNr() {
+    return Math.floor(Math.random() * 10) + 300;
+  }
 }
+
+// function getRandomSize() {
+//   return `${getRandomNr()}x${getRandomNr()}`;
+// }
+
+// function getRandomNr() {
+//   return Math.floor(Math.random() * 10) + 300;
+// }

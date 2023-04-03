@@ -7,6 +7,13 @@
     <title>Document</title>
   </head>
   <body>
-    <script src="classlist.js"></script>
+    <span class="a b c d f g h "></span>
+    <script>
+      const span = document.querySelector("span");
+      const classes = span.classList;
+      const length = classes.length;
+
+      span.textContent = `classList length = ${length}`;
+    </script>
   </body>
 </html>

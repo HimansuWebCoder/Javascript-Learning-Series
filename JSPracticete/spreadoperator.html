@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript Operators</h1>
+    <h2>The ... Operator</h2>
+
+    <p>The "spread" operator spreads elements of iterable objects:</p>
+
+    <!-- <p id="demo"></p> -->
+    <button>click</button>
+    <button id="btn">click</button>
+    <p></p>
+
+    <script>
+      const q1 = ["Jan", "Feb", "Mar"];
+      const q2 = ["Apr", "May", "Jun"];
+      const q3 = ["Jul", "Aug", "Sep"];
+      const q4 = ["Oct", "Nov", "May"];
+
+      // const year = [...q1, ...q2, ...q3, ...q4];
+      // document.getElementById("demo").innerHTML = year;
+      const btn = document.querySelector("button");
+      btn.addEventListener("click", change);
+      function change() {
+        const year = [...q1, ...q2, ...q3, ...q4];
+        const para = document.querySelector("p");
+        para.textContent = year;
+      }
+
+      const rndbtn = document.querySelector("#btn");
+      rndbtn.addEventListener("click", remove);
+      function remove() {
+        const year = [...q1, ...q2, ...q3, ...q4];
+        const para = document.querySelector("p");
+        para.textContent = "";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p></p>
+    <div></div>
+    <script>
+      //   const el = document.querySelector("p");
+      //   el.className = el.className === "active" ? "inactive" : "active";
+      //   const body = document.body;
+      //   const hima = document.getElementById("hima");
+      //   hima.textContent = "Hello";
+      //   body.appendChild(hima);
+      const paragraphs = document.querySelectorAll("p");
+      const hima = document.querySelector("div");
+      const para = document.createElement("p");
+      para.textContent = "what is the main aim of DOM";
+      hima.appendChild(para);
+      // paragraphs[0] is the first <p> element
+      // paragraphs[1] is the second <p> element, etc.
+      alert(paragraphs[0].nodeName);
+    </script>
+  </body>
+</html>

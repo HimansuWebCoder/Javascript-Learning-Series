@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+      li button {
+        font-size: 1rem;
+        margin-left: 20px;
+        color: white;
+        background-color: rgb(47, 0, 255);
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+      div button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Own Shopping List</h1>
+    <div>
+      <label for="item">Enter your items:</label>
+      <input type="text" name="item" id="item" />
+      <button>Add Your Items</button>
+    </div>
+
+    <ul>
+      <!-- this list looks like this after javascript code but now we hide it  -->
+      <!-- <li><span>Mango</span><button>delete</button></li>
+      <li><span>Orange</span> <button>delete</button></li>
+      <li><span>Lichi</span> <button>delete</button></li> -->
+    </ul>
+    <script>
+      const list = document.querySelector("ul");
+      const input = document.querySelector("input");
+      const button = document.querySelector("button");
+
+      button.addEventListener("click", () => {
+        const myItem = input.value;
+        input.value = "";
+
+        const listItem = document.createElement("li");
+        const listText = document.createElement("span");
+        const listBtn = document.createElement("button");
+
+        listItem.appendChild(listText);
+        listText.textContent = myItem;
+        listItem.appendChild(listBtn);
+        listBtn.textContent = "Delete";
+        list.appendChild(listItem);
+
+        listBtn.addEventListener("click", () => {
+          list.removeChild(listItem);
+        });
+        input.focus();
+        // input.blur();
+      });
+    </script>
+  </body>
+</html>

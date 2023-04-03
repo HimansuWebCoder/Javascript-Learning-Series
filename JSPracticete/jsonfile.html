@@ -7,6 +7,11 @@
     <title>Document</title>
   </head>
   <body>
-    <script src="classlist.js"></script>
+    <script>
+      let file = "jsonfile.json";
+      fetch(file)
+        .then((x) => x.json())
+        .then((y) => name.age);
+    </script>
   </body>
 </html>

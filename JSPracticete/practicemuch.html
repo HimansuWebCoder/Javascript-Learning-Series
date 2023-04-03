@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .style {
+        background-color: grey;
+        border: 2px solid blue;
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+        padding: 10px;
+        position: absolute;
+      }
+      button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button>click</button>
+    <div></div>
+    <button id="mybutton">remove</button>
+    <script>
+      const btn = document.querySelector("button");
+      btn.addEventListener("click", play);
+
+      //   function play() {
+      //     const hima = document.querySelector("div");
+      //     hima.classList.toggle("style");
+      //   }
+      // suppose we remove this using body touchEvent.
+      function play() {
+        const hima = document.querySelector("div");
+        hima.classList.add("style");
+      }
+
+      const button = document.querySelector("#mybutton");
+      button.addEventListener("click", remove);
+
+      function remove() {
+        const hima = document.querySelector("div");
+        hima.classList.remove("style");
+      }
+    </script>
+  </body>
+</html>

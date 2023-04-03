@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hima {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <button>button</button>
+    <div>himansu</div>
+    <script>
+      const btn = document.querySelector("button");
+      btn.addEventListener("click", change);
+
+      function change() {
+        const div = document.querySelector("div");
+        div.classList.toggle("hima");
+      }
+    </script>
+  </body>
+</html>

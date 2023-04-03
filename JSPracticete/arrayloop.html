@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>click</button>
+    <p></p>
+    <script>
+      const btn = document.querySelector("button");
+      btn.addEventListener("click", add);
+      function add() {
+        const numbers = [45, 4, 9, 16, 25];
+
+        let txt = "";
+        numbers.forEach(myfunction);
+        //   document.getElementById("demo").innerHTML = txt;
+        const para = document.querySelector("p");
+        para.textContent = txt;
+
+        //   function myFunction(value) {
+        //     txt += value + "<br>";
+        //   }
+
+        function myfunction(value) {
+          txt += value + " ";
+        }
+      }
+    </script>
+  </body>
+</html>

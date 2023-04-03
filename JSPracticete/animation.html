@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
-	
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      .background-black {
+        background-color: black;
+        color: white;
+      }
+      button {
+        cursor: pointer;
+      }
+	  body {
+		font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	  }
+    </style>
+  </head>
+  <body>
+    <button>DarkMode</button>
+    <main>
+      <article>
+        <h2>You can earn Money using HTML, CSS & other resources also.</h2>
+        <p>
+          These are the skills you must learn to earn money as a learner of Web
+          Development.
+        </p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>SASS - CSS Pre-Processor</li>
+          <li>TAILWIND-CSS - CSS Framework</li>
+        </ul>
+      </article>
+    </main>
+    <script>
+      const btn = document.querySelector("button");
+      btn.addEventListener("click", change);
+
+      function change() {
+        const body = document.body;
+        body.classList.toggle("background-black");
+      }
+    </script>
+  </body>
 </html>

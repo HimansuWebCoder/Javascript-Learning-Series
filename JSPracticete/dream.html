@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 200px;
+        border: 2px solid blue;
+        position: absolute;
+        top: 10%;
+        left: 20%;
+      }
+      button {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div>himansu</div> -->
+    <button class="himansu">delete</button>
+    <!-- <button class="rinky">Delete div</button> -->
+    <script>
+      const mybutton = document.querySelector(".himansu");
+
+      mybutton.addEventListener("click", show);
+
+      function show() {
+        const div = document.createElement("div");
+        const btn = document.createElement("button");
+
+        div.textContent = "Hello how are you all programmers?";
+        document.body.appendChild(div);
+
+        btn.textContent = "Delete";
+        div.appendChild(btn);
+
+        btn.addEventListener("click", delet);
+
+        function delet() {
+          document.body.removeChild(div);
+        }
+      }
+
+      // const rinky = document.querySelector(".rinky");
+
+      // rinky.addEventListener("click", wow);
+
+      // function wow() {
+      //   document.body.removeChild(div);
+      // }
+    </script>
+  </body>
+</html>

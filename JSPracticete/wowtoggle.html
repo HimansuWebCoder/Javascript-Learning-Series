@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Div wow toggle</title>
+    <style>
+      .mystyle {
+        width: 15rem;
+        height: 30rem;
+        background-color: rgba(43, 43, 236, 0.837);
+        border-radius: 2rem;
+        box-shadow: 0.5rem 0.8rem 0.4rem #000;
+        padding: 1rem;
+        color: white;
+        font-size: 2rem;
+        font-family: "Times New Roman", Times, serif;
+        display: flex;
+      }
+      div {
+        display: none;
+      }
+      .btn {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">Click</button>
+    <div class="container hima">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem assumenda
+      mollitia recusandae aliquid accusantium? Libero unde dolor at corporis?
+      Quis.
+    </div>
+    <script>
+      const btn = document.querySelector(".btn");
+
+      btn.addEventListener("click", style);
+
+      function style() {
+        const div = document.querySelector(".container");
+        div.classList.toggle("mystyle");
+      }
+    </script>
+  </body>
+</html>

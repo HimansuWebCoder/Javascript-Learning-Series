@@ -1,48 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animation</title>
     <style>
-      .background-black {
-        background-color: black;
-        color: white;
+      #myDIV {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: relative;
+        /* animation: mymove 1s infinite; */
       }
-      button {
-        cursor: pointer;
+
+      /* @keyframes mymove {
+        from {
+          left: 0px;
+        }
+        to {
+          left: 200px;
+        }
+      } */
+
+      @keyframes mynewmove {
+        from {
+          top: 0px;
+        }
+        to {
+          top: 200px;
+        }
       }
-	  body {
-		font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	  }
     </style>
   </head>
   <body>
-    <button>DarkMode</button>
-    <main>
-      <article>
-        <h2>You can earn Money using HTML, CSS & other resources also.</h2>
-        <p>
-          These are the skills you must learn to earn money as a learner of Web
-          Development.
-        </p>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>SASS - CSS Pre-Processor</li>
-          <li>TAILWIND-CSS - CSS Framework</li>
-        </ul>
-      </article>
-    </main>
-    <script>
-      const btn = document.querySelector("button");
-      btn.addEventListener("click", change);
+    <h1>HTML Style Object</h1>
+    <h2>The animation Property</h2>
 
-      function change() {
-        const body = document.body;
-        body.classList.toggle("background-black");
+    <p>
+      Click the "Try it" button to change the value of the animation property.
+    </p>
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDIV").style.animation = "mynewmove 4s 2";
       }
     </script>
+
+    <div id="myDIV"></div>
   </body>
 </html>

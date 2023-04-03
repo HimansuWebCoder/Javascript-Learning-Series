@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="admitted"></div>
+    <div class="refused"></div>
+    <script>
+      //   const people = [
+      //     "Chris",
+      //     "Anne",
+      //     "Colin",
+      //     "Terri",
+      //     "Phil",
+      //     "Lola",
+      //     "Sam",
+      //     "Kay",
+      //     "Bruce",
+      //   ];
+
+      const fruits = [
+        "Mango",
+        "Orange",
+        "Lichi",
+        "Apple",
+        "Guava",
+        "PineApple",
+      ];
+
+      //   const admitted = document.querySelector(".admitted");
+      //   const refused = document.querySelector(".refused");
+
+      const admitted = document.querySelector(".admitted");
+      const refused = document.querySelector(".refused");
+
+      admitted.contextContent = "Himansu";
+      refused.contextContent = "Rinky";
+
+      //   admitted.textContent = "Admit: ";
+      //   refused.textContent = "Refuse: ";
+
+      for (const fruit of fruits) {
+        if (fruit === "Mango" || fruit === "Orange") {
+          refused.textContent += `${fruit},`;
+        } else {
+          admitted.textContent += `${fruit},`;
+        }
+      }
+
+      //   for (const person of people) {
+      //     if (person === "Phil" || person === "Lola") {
+      //       refused.textContent += `${person}, `;
+      //     } else {
+      //       admitted.textContent += `${person}, `;
+      //     }
+      //   }
+
+      refused.textContent =
+        refused.textContent.slice(0, refused.textContent.length - 1) +
+        ".......................................";
+
+      //   refused.textContent =
+      //     refused.textContent.slice(0, refused.textContent.length - 1) + ".";
+      //   admitted.textContent =
+      //     admitted.textContent.slice(0, admitted.textContent.length - 1) + ".";
+
+      //   refused.textContent =
+      //     refused.textContent.slice(0, refused.textContent.length - 2) + ".";
+      //   admitted.textContent =
+      //     admitted.textContent.slice(0, admitted.textContent.length - 2) + ".";
+    </script>
+  </body>
+</html>

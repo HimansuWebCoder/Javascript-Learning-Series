@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Animation</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        /* animation-name: Himansu; */
+      }
+
+      @keyframes Himansu {
+        from {
+          top: 0px;
+          /* left:0px; */
+        }
+        to {
+          bottom: 1000px;
+        }
+      }
+
+      .change {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        /* animation-name: Himansu; */
+      }
+
+      @keyframes rinky {
+        from {
+          left: 0px;
+          /* left:0px; */
+        }
+        to {
+          right: 1000px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button>Animate</button>
+    <div class="papuni"></div>
+    <div class="sipu"></div>
+    <script>
+      const btn = document.querySelector("button");
+      btn.addEventListener("click", animate);
+      function animate() {
+        const div = document.querySelector(".papuni");
+        // div.style.animationName = "Himansu";
+        // div.style.animationIterationCount = "infinite";
+        // div.style.animationDirection = "alternate";
+        // div.style.animationDuration = "1s";
+        div.style.animation = "Himansu infinite alternate 1s";
+
+        const mydiv = document.querySelector(".sipu");
+        mydiv.style.animation = "rinky infinte alternate 1s";
+
+        mydiv.classList.toggle("change");
+      }
+    </script>
+  </body>
+</html>

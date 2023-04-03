@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="button">Create simple table</button>
+    <script>
+      const btn = document.querySelector("button");
+
+      btn.addEventListener("click", createTable);
+
+      function createTable() {
+        const body = document.body;
+        const table = document.createElement("table");
+        const head = document.createElement("th");
+        const trow = document.createElement("tr");
+        const tdata = document.createElement("td");
+
+        body.appendChild(table);
+        head.textContent = "Name";
+        // head.textContent = "Roll No";
+        table.appendChild(head);
+        trow.textContent = "Himansu";
+        head.appendChild(trow);
+        tdata.textContent = "Hello";
+        trow.appendChild(tdata);
+
+        table.style.border = "2px solid black";
+        head.style.border = "1px solid blue";
+        trow.style.border = "1px solid red";
+        table.style.position = "absolute";
+        table.style.top = "20%";
+        table.style.left = "30%";
+      }
+
+      const mybutton = document.querySelector(".button");
+      mybutton.addEventListener("click", button);
+      function button() {
+        const element = document.getElementById("button");
+        element.remove();
+      }
+    </script>
+  </body>
+</html>

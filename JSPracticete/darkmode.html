@@ -1,51 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DarkMode Creation</title>
     <style>
-      /* body {
-        padding: 25px;
-        background-color: white;
-        color: black;
-        font-size: 25px;
-      } */
-
-      body {
-        background-color: yellow;
-        color: red;
-      }
-
-      .dark {
+      .background-color {
         background-color: black;
         color: white;
       }
+
       button {
         cursor: pointer;
       }
     </style>
   </head>
   <body>
-    <!-- <h2>Toggle Dark/Light Mode</h2>
-    <p>Click the button to toggle between dark and light mode for this page.</p> -->
-
-    <!-- <button onclick="myFunction()">Toggle dark mode</button> -->
-    <button>toggleDarkmode</button>
+    <button>Darkmode</button>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-      perspiciatis animi et.
+      1. Object Oriented Programming<br />
+      2. Create a Basic JavaScript Object<br />
+      3. Use Dot Notation to Access the Properties of an Object<br />
+      4. Create a Method on an Object<br />
+      5. Make Code More Reusable with the this Keyword<br />
+      6. Define a Constructor Function<br />
+      7. Use a Constructor to Create Objects<br />
+      8. Extend Constructors to Receive Arguments<br />
+      9. Verify an Object's Constructor with instanceof<br />
+      10. Understand Own Properties<br />
+      11. Use Prototype Properties to Reduce Duplicate Code<br />
+      12. Iterate Over All Properties<br />
+      13. Understand the Constructor Property<br />
+      14. Change the Prototype to a New Object 15. Remember to Set the
+      Constructor Property when Changing the Prototype<br />
+      16. Understand Where an Object’s Prototype Comes From<br />
+      17. Not Passed<br />
+      18. Understand the Prototype Chain<br />
+      19. Not Passed<br />
+      20. Use Inheritance So You Don't Repeat Yourself<br />
+      21. Inherit Behaviors from a Supertype<br />
+      22. Not Passed<br />
+      23. Set the Child's Prototype to an Instance of the Parent<br />
+      24. Reset an Inherited Constructor Property<br />
+      25. Add Methods After Inheritance<br />
+      26. Override Inherited Methods<br />
+      27. Use a Mixin to Add Common Behavior Between Unrelated Objects<br />
+      28. Use Closure to Protect Properties Within an Object from Being Modified
+      Externally<br />
+      29. Understand the Immediately Invoked Function Expression (IIFE)<br />
+      30. Use an IIFE to Create a Module<br />
     </p>
 
     <script>
-      //   function myFunction() {
-      //     var element = document.body;
-      //     element.classList.toggle("dark-mode");
-      //   }
       const btn = document.querySelector("button");
+      btn.addEventListener("click", changeBackground);
 
-      btn.addEventListener("click", toggle);
-      function toggle() {
-        let element = document.body;
-        element.classList.toggle("dark");
+      function changeBackground() {
+        const body = document.body;
+        body.classList.toggle("background-color");
       }
     </script>
   </body>

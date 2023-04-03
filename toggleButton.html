@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .mystyle {
+        width: 100%;
+        padding: 25px;
+        background-color: coral;
+        color: white;
+        font-size: 25px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Click the "Try it" button to toggle between adding and removing the
+      "mystyle" class name of the DIV element:
+    </p>
+
+    <!-- <button onclick="myFunction()">Try it</button> -->
+    <button>Toggle</button>
+
+    <!-- <div id="myDIV">This is a DIV element.</div> -->
+    <div class="himansu">Wow This button</div>
+
+    <script>
+      //   function myFunction() {
+      //     var element = document.getElementById("myDIV");
+      //     element.classList.toggle("mystyle");
+      //   }
+
+      const btn = document.querySelector("button");
+      btn.addEventListener("click", toggleBtn);
+
+      function toggleBtn() {
+        let element = document.querySelector(".himansu");
+        element.classList.toggle("mystyle");
+      }
+    </script>
+  </body>
+</html>

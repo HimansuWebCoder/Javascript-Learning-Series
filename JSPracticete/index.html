@@ -1,37 +1,85 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Function start</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <style>
-      .msgBox {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+      div {
+        border: 2px solid blue;
+        background-color: azure;
         width: 200px;
-        background: #eee;
-      }
-
-      .msgBox p {
-        line-height: 1.5;
-        padding: 10px 20px;
-        color: #333;
-      }
-
-      .msgBox button {
-        background: none;
-        border: none;
+        height: 100px;
         position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 1.1rem;
-        color: #aaa;
+        top: 30%;
+        left: 0%;
+        animation: 1s linear 0s infinite alternate himansu;
       }
+      @keyframes himansu {
+        from {
+          /* transform: translateX(200vw); */
+          /* transform: translateX(100vh); */
+          transform: translateX(1000px);
+          background-color: red;
+          filter: brightness(100%);
+        }
+        to {
+          transform: translateX(100);
+          background-color: rgb(0, 21, 255);
+        }
+      }
+      /* h1 {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        border: 2px solid blue;
+      } */
     </style>
   </head>
   <body>
-    <button>Display message box</button>
+    <button class="button">create</button>
+    <script>
+      const btn = document.querySelector(".button");
+
+      btn.addEventListener("click", play);
+      function display() {
+        // const body = document.querySelector("body");
+        const div = document.createElement("div");
+        const closeBtn = document.createElement("button");
+        document.body.appendChild(div);
+
+        // const box = document.createElement("h1");
+        // document.body.appendChild(box);
+
+        closeBtn.textContent = "Stop";
+        div.appendChild(closeBtn);
+
+        closeBtn.onclick = function () {
+          div.parentNode.removeChild(div);
+          // div.parentNode.toggle(div);
+        };
+        closeBtn.style.cursor = "pointer";
+      }
+
+      function play() {
+        // const body = document.querySelector("body");
+        const div = document.createElement("div");
+        const closeBtn = document.createElement("button");
+        document.body.appendChild(div);
+
+        // const box = document.createElement("h1");
+        // document.body.appendChild(box);
+
+        closeBtn.textContent = "Stop";
+        div.appendChild(closeBtn);
+
+        closeBtn.onclick = function () {
+          div.parentNode.removeChild(div);
+          // div.parentNode.toggle(div);
+        };
+        closeBtn.style.cursor = "pointer";
+      }
+    </script>
   </body>
 </html>

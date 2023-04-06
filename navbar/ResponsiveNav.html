@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NavBar using javascript</title>
+    <style>
+      body {
+        background-color: rgba(245, 245, 103, 0.6);
+        color: red;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /* ===============
+	  Navbar 
+	  =============== */
+      nav {
+        background-color: rgba(231, 227, 227, 0.693);
+        box-shadow: 2px 1px 5px grey;
+      }
+
+      .nav-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+      }
+
+      .nav-toggle {
+        font-size: 1.5rem;
+        color: white;
+        background-color: black;
+        border-color: red;
+        transition: all 0.2s linear;
+        cursor: pointer;
+      }
+
+      .nav-toggle:hover {
+        color: red;
+        background-color: yellow;
+        padding-left: 0.6rem;
+      }
+
+      .links a {
+        color: blue;
+        display: block;
+        padding: 0.5rem;
+        transition: all 0.2s linear;
+      }
+
+      .links a:hover {
+        background-color: black;
+        color: white;
+        padding-left: 1rem;
+      }
+
+      .links {
+        height: 0;
+        overflow: hidden;
+        transition: all 0.2s linear;
+      }
+
+      .show-links {
+        height: 10rem;
+      }
+
+      @media screen and (min-width: 800px) {
+        .nav-center {
+          max-width: 1170px;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 1rem;
+        }
+
+        .nav-header {
+          padding: 0;
+        }
+
+        .nav-toggle {
+          display: none;
+        }
+
+        .links a {
+          padding: 0;
+          margin: 0 0.5rem;
+        }
+
+        .links a:hover {
+          padding: 0;
+          background: rgba(184, 71, 71, 0.575);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-center">
+        <!-- nav header -->
+
+        <div class="nav-header">
+          <button class="nav-toggle">button</button>
+        </div>
+
+        <!-- links -->
+
+        <ul class="links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Coding</a></li>
+          <li><a href="#">Programming</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const links = document.querySelector(".links");
+
+      navToggle.addEventListener("click", function () {
+        links.classList.toggle("show-links");
+      });
+    </script>
+  </body>
+</html>
